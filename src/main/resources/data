@@ -1,0 +1,13 @@
+show db;
+use customerdb;
+db.createCollection("customer");
+db.customer.insert({"fullName" : "John Smith","policyNumber" : "123","address" : "Edinburgh","email" : "abc2@gmail.com",	"mobilePhoneNumber" : "0777777777",	});
+
+
+> db.customer.find();
+{ "_id" : ObjectId("5acdf2e10d79e027e7152b2f"), "fullName" : "John Smith", "policyNumber" : "123", "address" : "Edinburgh", "email" : "abc2@gmail.com", "mobilePhoneNumber" : "0777777777" }
+> db.customer.insert({"fullName" : "Rita Smith","policyNumber" : "1267","address" : "Edinburgh","email" : "ccd@gmail.com","mobilePhoneNumber" : "0777777990",});
+WriteResult({ "nInserted" : 1 })
+> db.customer.insert({"fullName" : "John Smith","policyNumber" : "123","address" : "Edinburgh","email" : "abc2@gmail.com","mobilePhoneNumber" : "0777777777",});
+WriteResult({ "nInserted" : 1 })
+>
